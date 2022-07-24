@@ -55,6 +55,7 @@
 
 .navbar-social-icons-container {
   display: flex;
+  height: 30px;
 }
 
 .social-icon {
