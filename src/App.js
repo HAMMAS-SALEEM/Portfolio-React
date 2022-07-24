@@ -1,5 +1,4 @@
 import './App.css';
-import { Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import About from './components/About';
 import Home from './components/Home';
@@ -10,15 +9,27 @@ import Contact from './components/Contact';
 
 const App = () => (
   <>
-    <Navbar />
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/services" element={<Services />} />
-      <Route path="/portfolio" element={<Portfolio />} />
-      <Route path="/blog" element={<Blog />} />
-      <Route path="/contact" element={<Contact />} />
-    </Routes>
+    <header>
+      <Navbar />
+    </header>
+    <section id="home">
+      <Home />
+    </section>
+    <section id="about">
+      <About />
+    </section>
+    <section id="services">
+      <Services />
+    </section>
+    <section id="portfolio">
+      <Portfolio />
+    </section>
+    <section id="blog">
+      <Blog />
+    </section>
+    <section id="contact">
+      <Contact />
+    </section>
   </>
 );
 
