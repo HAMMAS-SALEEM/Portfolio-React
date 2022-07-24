@@ -4,6 +4,7 @@ import '../stylesheets/navbar.css';
 import { ReactComponent as GitHub } from '../images/icons/github.svg';
 import { ReactComponent as LinkedIn } from '../images/icons/linkedin.svg';
 import { ReactComponent as Twitter } from '../images/icons/twitter.svg';
+import { ReactComponent as AngelList } from '../images/icons/angellist.svg';
 import { ReactComponent as Close } from '../images/icons/close.svg';
 import { ReactComponent as Menu } from '../images/icons/menu.svg';
 
@@ -20,7 +21,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="navbar">
-        <div className="mobile-side-nav.active">
+        <div className={menuStatus ? 'mobile-side-nav' : 'mobile-side-nav-hidden'}>
           <ul>
             <li className="menu-close-icon-container">
               <Close onClick={handleMenu} className="social-icon menu-close-icon" />
@@ -30,6 +31,7 @@ const Navbar = () => {
                 {
           links.map((link) => (
             <NavLink
+              onClick={handleMenu}
               className="nav-single-link"
               key={link.id}
               to={link.to}
@@ -56,6 +58,11 @@ const Navbar = () => {
           <li>
             <a href="https://twitter.com/HammasSaleem4">
               <Twitter className="social-icon" />
+            </a>
+          </li>
+          <li>
+            <a href="https://angel.co/u/hammas-saleem">
+              <AngelList className="social-icon" />
             </a>
           </li>
         </ul>

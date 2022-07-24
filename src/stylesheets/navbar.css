@@ -1,29 +1,34 @@
 .navbar {
   display: flex;
-  background-color: rgb(25,25,25);
+  background-color: rgb(25, 25, 25);
   justify-content: space-between;
   padding: 30px;
   align-items: center;
   height: 50px;
   width: 100%;
-  overflow: hidden;
 }
 
-.mobile-side-nav {
+.mobile-side-nav,
+.mobile-side-nav-hidden {
   position: fixed;
   width: 50%;
   height: 100vh;
-  background-color: rgb(16,16,16);
+  background-color: rgb(16, 16, 16);
   display: flex;
   flex-direction: column;
   top: 0;
   bottom: 0;
   right: 0;
   padding: 20px 10px;
+  z-index: 2;
+  transition: all 250ms ease-in-out;
+}
+
+.mobile-side-nav-hidden {
   transform: translateX(200%);
 }
 
-.mobile-side-nav:active {
+.mobile-side-nav {
   transform: translateX(0);
 }
 
@@ -43,8 +48,8 @@
 }
 
 .nav-single-link:hover {
-  color: rgb(235,69,76);
-  border-bottom: 1px solid rgb(235,69,76);
+  color: rgb(235, 69, 76);
+  border-bottom: 1px solid rgb(235, 69, 76);
   transition: all 300ms ease-in-out;
 }
 
@@ -61,7 +66,7 @@
 }
 
 .social-icon:hover {
-  fill: rgb(235,69,76);
+  fill: rgb(235, 69, 76);
   transform: translateY(-5px);
   transition: all 200ms ease-in-out;
 }
@@ -73,15 +78,51 @@
 .menu-close-icon:hover,
 .menu-open-icon:hover {
   transform: translateY(0);
+  cursor: pointer;
 }
 
 .menu-close-icon-container {
   display: flex;
-  justify-content: end;
-  cursor: pointer;
+  justify-content: flex-end;
 }
 
-/* .nav-single-link,
-.social-icon {
-  margin: 0 10px;
-} */
+@media screen and (max-width: 900px) {
+  .mobile-side-nav,
+  .mobile-side-nav-hidden {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-close-icon-container,
+  .menu-close-icon,
+  .menu-open-icon {
+    display: none;
+  }
+
+  .mobile-side-nav,
+  .mobile-side-nav-hidden {
+    position: static;
+    transform: translateX(0);
+    height: auto;
+    background: none;
+    padding: 0;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    justify-content: space-between;
+    border-spacing: 20px;
+    border-collapse: collapse;
+  }
+
+  .nav-single-link {
+    border-bottom: none;
+    margin: 0;
+    padding-top: 10px;
+  }
+
+  .nav-single-link:hover {
+    border-bottom: none;
+  }
+}
