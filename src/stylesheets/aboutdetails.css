@@ -1,0 +1,13 @@
+.about-details-navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: 20px 0;
+}
+
+.about-details-navlink {
+  color: white;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+  padding-bottom: 10px;
+}

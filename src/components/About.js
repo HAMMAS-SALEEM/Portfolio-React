@@ -1,11 +1,10 @@
 import React from 'react';
-// import Hammas from '../images/about/hammas.jpg';
 import '../stylesheets/about.css';
+import AboutDetails from './AboutDetails';
 
 const About = () => (
   <div className="about-me-section">
     <div className="about-me-picture">
-      {/* <img className="hammas-about-pic" src={Hammas} alt="hammas" /> */}
       <div className="about-me-picture-overlay"> </div>
     </div>
     <div className="about-me-details">
@@ -19,6 +18,7 @@ const About = () => (
         a project you need coded, don&apos;t
         hestiate to contact me.
       </p>
+      <AboutDetails />
     </div>
   </div>
 );
