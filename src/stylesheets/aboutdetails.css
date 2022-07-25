@@ -7,7 +7,30 @@
 
 .about-details-navlink {
   color: white;
-  border-bottom: 1px solid white;
   cursor: pointer;
   padding-bottom: 10px;
+}
+
+.about-navlink-border {
+  height: 1px;
+  width: 30px;
+  border: 1px solid white;
+  margin-top: 6px;
+}
+
+.about-details-navlink:hover {
+  color: rgb(235, 69, 76);
+}
+
+.about-details-navlink,
+.about-details-navlink:hover,
+.about-navlink-border,
+.about-details-navlink:hover .about-navlink-border {
+  transition: all 250ms ease-in-out;
+}
+
+.about-details-navlink:hover .about-navlink-border,
+.about-navlink-border-active {
+  border: 1px solid rgb(235, 69, 76);
+  width: 100%;
 }
