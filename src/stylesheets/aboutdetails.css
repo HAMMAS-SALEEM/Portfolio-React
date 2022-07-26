@@ -1,0 +1,60 @@
+.about-details-navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: 20px 0;
+}
+
+.about-details-navlink {
+  padding-bottom: 10px;
+  cursor: pointer;
+  background: none;
+  outline: none;
+  border: none;
+  color: white;
+}
+
+.about-navlink-border {
+  height: 1px;
+  width: 30px;
+  border: 1px solid white;
+  margin-top: 6px;
+}
+
+.about-details-navlink,
+.about-details-navlink:hover,
+.about-navlink-border,
+.about-details-navlink:hover .about-navlink-border {
+  transition: all 250ms ease-in-out;
+}
+
+.about-details-navlink:hover,
+.about-details-navlink-button:hover {
+  color: rgb(235, 69, 76);
+}
+
+.about-details-navlink:hover .about-navlink-border,
+.about-details-navlink.active .about-navlink-border {
+  border: 1px solid rgb(235, 69, 76);
+  width: 100%;
+}
+
+.about-details-navlink.active {
+  color: rgb(235, 69, 76);
+}
+
+.about-me-skills-title {
+  color: rgb(155, 157, 164);
+  font-weight: 700;
+}
+
+.about-me-skills-extra-title {
+  font-weight: 400;
+}
+
+.about-me-skills-title,
+.about-me-skills-extra-title,
+.about-me-skills-description {
+  font-size: 16px;
+  color: rgb(155, 157, 164);
+}
