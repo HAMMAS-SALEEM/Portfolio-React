@@ -1,6 +1,6 @@
-.services-container {
+.services-page {
   padding: 100px 10px;
-  background: rgb(16,16,16);
+  background: rgb(16, 16, 16);
   color: white;
   display: flex;
   flex-direction: column;
@@ -19,6 +19,12 @@
 .services-title,
 .services-par {
   text-align: center;
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 @media screen and (min-width: 768px) {
