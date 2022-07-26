@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../stylesheets/aboutdetails.css';
-import { aboutDetails, aboutLinks } from './AboutSectionData';
+import { aboutDetails, aboutLinks } from './data/AboutSectionData';
 
 const AboutDetails = () => {
   const [view, setView] = useState(0);
