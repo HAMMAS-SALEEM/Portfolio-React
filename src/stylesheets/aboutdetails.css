@@ -21,16 +21,16 @@
   margin-top: 6px;
 }
 
-.about-details-navlink:hover,
-.about-details-navlink-button:hover {
-  color: rgb(235, 69, 76);
-}
-
-.about-details-navlink:hover,
 .about-details-navlink,
+.about-details-navlink:hover,
 .about-navlink-border,
 .about-details-navlink:hover .about-navlink-border {
   transition: all 250ms ease-in-out;
+}
+
+.about-details-navlink:hover,
+.about-details-navlink-button:hover {
+  color: rgb(235, 69, 76);
 }
 
 .about-details-navlink:hover .about-navlink-border,
