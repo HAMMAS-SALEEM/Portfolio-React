@@ -1,0 +1,23 @@
+.project-card {
+  position: relative;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 12px;
+  height: 500px;
+}
+
+.project-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(133, 133, 133, 0.363);
+  position: absolute;
+}
+
+.large-heading,
+.small-heading,
+.project-buttons-container {
+  z-index: 10;
+}
