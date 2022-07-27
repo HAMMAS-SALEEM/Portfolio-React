@@ -11,9 +11,11 @@
 .service-card-svg {
   width: 50px;
   fill: white;
+  margin-bottom: 12px;
 }
 
 .service-card-description {
+  margin-top: 12px;
   width: 300px;
 }
 
