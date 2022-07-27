@@ -1,11 +1,22 @@
 .navbar {
+  background: black;
   display: flex;
-  background-color: rgb(25, 25, 25);
   justify-content: space-between;
   padding: 30px;
   align-items: center;
   height: 50px;
   width: 100%;
+}
+
+.navbar.active {
+  position: fixed;
+  top: 0;
+  background: rgb(25, 25, 25);
+}
+
+.navbar,
+.navbar.active {
+  transition: background 300ms ease-in-out;
 }
 
 .mobile-side-nav,

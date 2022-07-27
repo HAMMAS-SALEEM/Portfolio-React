@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { HashLink as NavLink } from 'react-router-hash-link';
 import '../stylesheets/navbar.css';
+import { links } from './data/NavbarData';
 import { ReactComponent as GitHub } from '../images/icons/github.svg';
 import { ReactComponent as LinkedIn } from '../images/icons/linkedin.svg';
 import { ReactComponent as Twitter } from '../images/icons/twitter.svg';
@@ -10,17 +11,22 @@ import { ReactComponent as Menu } from '../images/icons/menu.svg';
 
 const Navbar = () => {
   const [menuStatus, setMenuStatus] = useState(false);
-  const links = [{ id: '0', to: '#home', title: 'Home' },
-    { id: '1', to: '#about', title: 'About' },
-    { id: '2', to: '#services', title: 'Services' },
-    { id: '3', to: '#portfolio', title: 'Portfolio' },
-    { id: '4', to: '#blog', title: 'Blog' },
-    { id: '5', to: '#contact', title: 'Contact' }];
+  const [navbar, setNavbar] = useState(false);
+
+  const handleNavbar = () => {
+    if (window.scrollY >= 100) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+
+  window.addEventListener('scroll', handleNavbar);
 
   const handleMenu = () => setMenuStatus(!menuStatus);
   return (
     <>
-      <nav className="navbar">
+      <nav className={navbar ? 'navbar active' : 'navbar'}>
         <div className={menuStatus ? 'mobile-side-nav' : 'mobile-side-nav-hidden'}>
           <ul>
             <li className="menu-close-icon-container">
