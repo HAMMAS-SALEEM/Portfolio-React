@@ -1,0 +1,45 @@
+.service-card {
+  background: linear-gradient(90deg, #f61b10, #ef0963);
+  margin: 30px 10px;
+  padding: 40px 10px;
+  border-radius: 10px;
+  flex-grow: 1;
+  min-width: 40%;
+  cursor: pointer;
+}
+
+.service-card-svg {
+  width: 50px;
+  fill: white;
+  margin-bottom: 12px;
+}
+
+.service-card-description {
+  margin-top: 12px;
+  width: 300px;
+}
+
+@media screen and (min-width: 786px) {
+  .service-card {
+    background: rgb(25, 25, 25);
+    padding: 70px 40px;
+  }
+
+  .service-card-svg {
+    fill: #ef0963;
+  }
+
+  .service-card:hover .service-card-svg {
+    fill: white;
+  }
+
+  .service-card,
+  .service-card:hover {
+    transition: all 300ms ease-in-out;
+  }
+
+  .service-card:hover {
+    background: linear-gradient(90deg, #f61b10, #ef0963);
+    transform: translateY(-15px);
+  }
+}

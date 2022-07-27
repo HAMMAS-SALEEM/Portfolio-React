@@ -29,10 +29,23 @@
 .about-me-title {
   color: white;
   font-size: 36px;
+  margin: 12px 0;
 }
 
 .about-me-par {
   color: rgba(198, 201, 216, 0.75);
+}
+
+button#a0 {
+  width: 68px;
+}
+
+button#a1 {
+  width: 74px;
+}
+
+button#a2 {
+  width: 154px;
 }
 
 @media screen and (max-width: 530px) {
