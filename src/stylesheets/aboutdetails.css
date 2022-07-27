@@ -1,8 +1,7 @@
 .about-details-navbar {
   display: flex;
-  justify-content: space-between;
-  width: 70%;
   margin: 20px 0;
+  flex-wrap: wrap;
 }
 
 .about-details-navlink {
@@ -12,6 +11,7 @@
   outline: none;
   border: none;
   color: white;
+  margin: 10px;
 }
 
 .about-navlink-border {
@@ -57,4 +57,10 @@
 .about-me-skills-description {
   font-size: 16px;
   color: rgb(155, 157, 164);
+}
+
+@media screen and (min-width: 768px) {
+  button#a0 {
+    margin-left: 0;
+  }
 }

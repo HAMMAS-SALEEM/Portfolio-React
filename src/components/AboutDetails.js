@@ -16,8 +16,8 @@ const AboutDetails = () => {
       <ul className="about-details-navbar">
         {
             aboutLinks.map((link, index) => (
-              <li key={link.id}>
-                <button onClick={(e) => handleLink(e.target.id)} id={index} className={handleActiveLink(index)} type="button">
+              <li className="single-navlink-container" key={link.id}>
+                <button onClick={(e) => handleLink(e.target.id)} id={`a${index}`} className={handleActiveLink(index)} type="button">
                   {link.link}
                   <br />
                   <div className="about-navlink-border"> </div>
