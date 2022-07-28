@@ -9,12 +9,12 @@ const Portfolio = () => {
   const desc = 'Checkout my latest React and Rails projects';
 
   return (
-    <div className="projects-container">
+    <div className="projects-page">
       <PageTitle title={title} desc={desc} />
-      <ul>
+      <ul className="projects-container">
         {
-          projects.map((project) => (
-            <li key={project.id}><ProjectCard title={project.title} img={project.img} /></li>
+          projects.map((project, index) => (
+            <li id={`project-container${index + 1}`} key={project.id}><ProjectCard title={project.title} img={project.img} /></li>
           ))
         }
       </ul>

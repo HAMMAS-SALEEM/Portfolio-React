@@ -1,3 +1,30 @@
+#project-container1 {
+  background: url(../images/projects/PWW.png);
+}
+
+#project-container2 {
+  background: url(../images/projects/budgetApp.png);
+}
+
+#project-container3 {
+  background: url(../images/projects/carApp.png);
+}
+
+#project-container4 {
+  background: url(../images/projects/todolist.png);
+}
+
+#project-container1,
+#project-container2,
+#project-container3,
+#project-container4 {
+  margin: 12px;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
 .project-card {
   position: relative;
   color: white;
@@ -5,19 +32,40 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 12px;
   height: 500px;
 }
 
 .project-overlay {
   width: 100%;
   height: 100%;
-  background-color: rgba(133, 133, 133, 0.363);
+  background-color: rgba(0, 0, 0, 0.582);
   position: absolute;
+  left: 0;
+  right: 0;
+}
+
+#project-container1,
+#project-container2,
+#project-container3,
+#project-container4,
+.project-overlay {
+  border-radius: 10px;
 }
 
 .large-heading,
 .small-heading,
 .project-buttons-container {
   z-index: 10;
+}
+
+#project-container1:hover div .project-overlay,
+#project-container2:hover div .project-overlay,
+#project-container3:hover div .project-overlay,
+#project-container4:hover div .project-overlay {
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.692) 10%, #ee0b62b7);
+  transition: all 250ms ease-in-out;
+}
+
+.project-overlay:hover {
+  background-size: 10%;
 }
