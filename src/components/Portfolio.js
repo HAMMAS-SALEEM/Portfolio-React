@@ -14,7 +14,7 @@ const Portfolio = () => {
       <ul className="projects-container">
         {
           projects.map((project, index) => (
-            <li id={`project-container${index + 1}`} key={project.id}><ProjectCard title={project.title} img={project.img} /></li>
+            <li id={`project-container${index + 1}`} className="project-container-all" key={project.id}><ProjectCard title={project.title} img={project.img} /></li>
           ))
         }
       </ul>

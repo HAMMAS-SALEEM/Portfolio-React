@@ -1,3 +1,7 @@
+.project-card {
+  overflow: hidden;
+}
+
 #project-container1 {
   background: url(../images/projects/PWW.png);
 }
@@ -19,11 +23,25 @@
 #project-container3,
 #project-container4 {
   margin: 12px;
-  background-size: 100%;
+  background-size: 105%;
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
 }
+
+#project-container1:hover,
+#project-container2:hover,
+#project-container3:hover,
+#project-container4:hover {
+  background-size: 100%;
+}
+
+.project-container-all,
+.project-container-all:hover {
+  transition: background-size .3s ease-in-out;
+}
+
+
 
 .project-card {
   position: relative;
@@ -38,10 +56,22 @@
 .project-overlay {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.582);
+  background-color: rgba(0, 0, 0, 0.589);
   position: absolute;
   left: 0;
   right: 0;
+}
+
+.project-card:hover .project-overlay {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#5f0024d2, white);
+  backdrop-filter: blur(10px);
+}
+
+.project-overlay,
+.project-overlay:hover {
+  transition: all 0.3s ease-in-out;
 }
 
 #project-container1,
@@ -58,14 +88,46 @@
   z-index: 10;
 }
 
-#project-container1:hover div .project-overlay,
-#project-container2:hover div .project-overlay,
-#project-container3:hover div .project-overlay,
-#project-container4:hover div .project-overlay {
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.692) 10%, #ee0b62b7);
-  transition: all 250ms ease-in-out;
+.small-heading {
+  font-size: 16px;
 }
 
-.project-overlay:hover {
-  background-size: 10%;
+.large-heading {
+  font-size: 28px;
+}
+
+.project-buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100px;
+  justify-content: space-evenly;
+  position: absolute;
+  bottom: -100px;
+  transition: all .3s ease-in-out;
+}
+
+.project-button {
+  background: none;
+  border: 2px solid rgba(255, 255, 255, 0.267);
+  color: white;
+  border-radius: 5px;
+  width: 140px;
+  text-align: center;
+  padding: 5px 0;
+  cursor: pointer;
+}
+
+.project-button:hover {
+  background: rgb(235, 69, 76);
+  border: 2px solid rgb(235, 69, 76);
+}
+
+.project-button,
+.project-button:hover {
+  transition: all .3s ease-in-out;
+}
+
+.project-card:hover .project-buttons-container {
+  bottom: 50px;
 }

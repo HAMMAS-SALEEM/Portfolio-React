@@ -8,10 +8,7 @@ const AboutDetails = () => {
     setView(index);
   };
 
-  const handleActiveLink = (index) => {
-    console.log(index);
-    return index === view ? 'about-details-navlink active' : 'about-details-navlink';
-  };
+  const handleActiveLink = (index) => (index === view ? 'about-details-navlink active' : 'about-details-navlink');
   return (
     <>
       <ul className="about-details-navbar">
