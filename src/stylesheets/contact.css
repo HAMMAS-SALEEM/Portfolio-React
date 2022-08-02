@@ -66,14 +66,6 @@
   display: flex;
 }
 
-.footer-social-icon {
-  fill: rgb(168, 168, 168);
-  width: 30px;
-  height: 30px;
-  transition: all 200ms ease-in-out;
-  margin: 0 10px;
-}
-
 .footer-license-description {
   font-size: 14px;
 }
