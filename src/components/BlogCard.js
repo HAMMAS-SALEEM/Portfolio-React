@@ -12,7 +12,7 @@ const BlogCard = ({ blog }) => (
       <h3 className="blog-title">{blog.title}</h3>
       <p className="blog-desc">{blog.desc}</p>
     </div>
-    <button className="blog-button" type="button">Read Article</button>
+    <a href={blog.link} className="blog-button">Read Article</a>
   </div>
 );
 
@@ -24,5 +24,6 @@ BlogCard.propTypes = {
     badge: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     desc: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
   }).isRequired,
 };
