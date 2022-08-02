@@ -1,0 +1,116 @@
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  background: rgb(25, 25, 25);
+  padding: 100px 40px 0 40px;
+}
+
+.contact-page-title {
+  font-size: 36px;
+}
+
+.contact-page-description {
+  color: rgba(270, 270, 270, 0.6);
+  font-size: 16px;
+}
+
+.contact-form-input {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px 0;
+  text-indent: 10px;
+  background: none;
+  border: 2px solid rgba(270, 270, 270, 0.3);
+  border-radius: 5px;
+  outline: none;
+  transition: 250ms;
+}
+
+.contact-section,
+.contact-form-input,
+.contact-page-description-white {
+  color: white;
+}
+
+.contact-form-input:focus {
+  border: 2px solid rgb(235, 69, 76);
+}
+
+.contact-form-submit-button {
+  background: rgb(235, 69, 76);
+  color: white;
+  border: 2px solid rgb(235, 69, 76);
+  font-weight: 500;
+  padding: 9px 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 250ms;
+  margin-top: 12px;
+  margin-bottom: 100px;
+}
+
+.contact-form-submit-button:hover {
+  background: none;
+  color: rgb(235, 69, 76);
+}
+
+.footer-social-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  padding: 50px 40px;
+  margin: 0 -40px;
+  background: rgb(16, 16, 16);
+}
+
+.footer-social-links-container {
+  display: flex;
+}
+
+.footer-social-icon {
+  fill: rgb(168, 168, 168);
+  width: 30px;
+  height: 30px;
+  transition: all 200ms ease-in-out;
+  margin: 0 10px;
+}
+
+.footer-license-description {
+  font-size: 14px;
+}
+
+.footer-icon,
+.footer-social-links-container,
+.footer-license-description {
+  margin-bottom: 12px;
+}
+
+.footer-social-links-container,
+.footer-license-description {
+  justify-self: center;
+}
+
+@media screen and (max-width: 694px) {
+  .footer-icon {
+    justify-self: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contact-page-title {
+    font-size: 60px;
+  }
+
+  .contact-page-description {
+    font-size: 18px;
+  }
+
+  .footer-license-description {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 995px) {
+  .footer-icon {
+    justify-self: center;
+  }
+}

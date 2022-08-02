@@ -1,5 +1,6 @@
 .blog-card {
   margin: 12px;
+  padding-bottom: 50px;
   background: #212121;
   color: white;
 }
@@ -37,6 +38,8 @@
   cursor: pointer;
   transition: 250ms;
   font-weight: 600;
+  position: relative;
+  top: 12px;
 }
 
 .blog-button:hover {
