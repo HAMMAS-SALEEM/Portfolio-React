@@ -1,6 +1,7 @@
 import React from 'react';
-import BlogCard from './BlogCard';
 import PageTitle from './PageTitle';
+import BlogCard from './BlogCard';
+import { blogs } from './data/BlogData';
 import '../stylesheets/blog.css';
 
 const Blog = () => {
@@ -10,7 +11,11 @@ const Blog = () => {
     <section className="blogs-section">
       <PageTitle title={title} desc={desc} />
       <div className="blogs-container">
-        <BlogCard />
+        {
+          blogs.map((blog) => (
+            <BlogCard key={blog.id} blog={blog} />
+          ))
+        }
       </div>
     </section>
   );

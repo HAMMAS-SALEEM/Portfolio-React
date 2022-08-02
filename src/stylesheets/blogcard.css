@@ -2,11 +2,14 @@
   margin: 12px;
   background: #212121;
   color: white;
-  box-shadow: 0 0 4px rgba(270, 270, 270, 0.5);
 }
 
 .blog-image {
   border-radius: 10px 10px 0 0;
+}
+
+.blog-details {
+  padding: 12px;
 }
 
 .blog-badge {
@@ -15,8 +18,8 @@
   font-weight: 600;
 }
 
-.blog-details {
-  padding: 12px;
+.blog-title {
+  font-size: 24px;
 }
 
 .blog-title,
