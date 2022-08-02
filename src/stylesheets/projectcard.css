@@ -1,0 +1,128 @@
+.project-card {
+  position: relative;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  overflow: hidden;
+}
+
+#project-container1 {
+  background: url(../images/projects/PWW.png);
+}
+
+#project-container2 {
+  background: url(../images/projects/budgetApp.png);
+}
+
+#project-container3 {
+  background: url(../images/projects/carApp.png);
+}
+
+#project-container4 {
+  background: url(../images/projects/todolist.png);
+}
+
+.project-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.589);
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+#project-container1,
+#project-container2,
+#project-container3,
+#project-container4 {
+  margin: 12px;
+  background-size: 105%;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+#project-container1,
+#project-container2,
+#project-container3,
+#project-container4,
+.project-overlay {
+  border-radius: 10px;
+}
+
+#project-container1:hover,
+#project-container2:hover,
+#project-container3:hover,
+#project-container4:hover {
+  background-size: 100%;
+}
+
+.project-container-all,
+.project-container-all:hover {
+  transition: background-size 0.3s ease-in-out;
+}
+
+.project-overlay,
+.project-overlay:hover {
+  transition: all 0.3s ease-in-out;
+}
+
+.project-card:hover .project-overlay {
+  width: 100%;
+  height: 100%;
+  background: #5f0024d2;
+  backdrop-filter: blur(10px);
+}
+
+.large-heading,
+.small-heading,
+.project-buttons-container {
+  z-index: 10;
+}
+
+.small-heading {
+  font-size: 16px;
+}
+
+.large-heading {
+  font-size: 28px;
+}
+
+.project-buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100px;
+  justify-content: space-evenly;
+  position: absolute;
+  bottom: -100px;
+  transition: all 0.3s ease-in-out;
+}
+
+.project-button {
+  background: none;
+  border: 2px solid rgba(255, 255, 255, 0.267);
+  color: white;
+  border-radius: 5px;
+  width: 140px;
+  text-align: center;
+  padding: 5px 0;
+  cursor: pointer;
+}
+
+.project-button,
+.project-button:hover {
+  transition: all 0.3s ease-in-out;
+}
+
+.project-button:hover {
+  background: rgb(235, 69, 76);
+  border: 2px solid rgb(235, 69, 76);
+}
+
+.project-card:hover .project-buttons-container {
+  bottom: 50px;
+}

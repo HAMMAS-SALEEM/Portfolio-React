@@ -1,0 +1,22 @@
+.page-title {
+  font-size: 36px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.page-desc {
+  font-size: 18px;
+  color: rgba(200, 200, 200, 0.8);
+  margin-bottom: 40px;
+}
+
+.page-title,
+.page-desc {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .page-title {
+    font-size: 60px;
+  }
+}

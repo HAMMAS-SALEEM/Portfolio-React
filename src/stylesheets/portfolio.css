@@ -1,0 +1,9 @@
+.projects-page {
+  padding: 100px 40px;
+  background: rgb(25, 25, 25);
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
