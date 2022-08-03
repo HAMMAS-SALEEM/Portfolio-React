@@ -21,6 +21,11 @@
   transition: background 300ms ease-in-out;
 }
 
+.logo-navlink-container {
+  display: flex;
+  align-items: center;
+}
+
 .mobile-side-nav,
 .mobile-side-nav-hidden {
   position: fixed;
@@ -69,6 +74,8 @@
 .navbar-social-icons-container {
   display: flex;
   height: 30px;
+  position: absolute;
+  right: 90px;
 }
 
 .social-icon {
@@ -108,6 +115,10 @@
 }
 
 @media screen and (min-width: 768px) {
+  .navbar {
+    height: 100px;
+  }
+
   .menu-close-icon-container,
   .menu-close-icon,
   .menu-open-icon {
@@ -132,7 +143,7 @@
 
   .nav-single-link {
     border-bottom: none;
-    margin: 0;
+    margin: 0 0 0 20px;
     padding-top: 10px;
   }
 

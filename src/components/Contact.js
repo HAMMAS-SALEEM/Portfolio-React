@@ -22,7 +22,10 @@ const Contact = () => (
       <button type="submit" className="contact-form-submit-button">Submit</button>
     </form>
     <div className="footer-social-links">
-      <h3 className="footer-icon"><Logo /><span>hammasCoding</span></h3>
+      <h3 className="footer-icon">
+        <Logo />
+        <span>hammasCoding</span>
+      </h3>
       <ul className="footer-social-links-container">
         {
           socialLinks.map((link) => (
