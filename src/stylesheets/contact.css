@@ -57,9 +57,19 @@
 .footer-social-links {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  align-items: center;
   padding: 50px 40px;
   margin: 0 -40px;
   background: rgb(16, 16, 16);
+}
+
+.footer-icon {
+  display: flex;
+  align-items: center;
+}
+
+.footer-icon span {
+  margin-left: 12px;
 }
 
 .footer-social-links-container {

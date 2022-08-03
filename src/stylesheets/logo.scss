@@ -1,0 +1,39 @@
+.logo-container {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(rgb(212, 55, 81) 31%, violet);
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 50%;
+
+  .white-bar {
+    width: 15%;
+    height: 100%;
+    background: white;
+    border-radius: 2px;
+    position: relative;
+    margin: 0 3%;
+  }
+
+  .white-bar-first {
+    top: -25%;
+  }
+
+  .white-bar-second {
+    height: 53%;
+    transform: rotate(90deg);
+    top: 20%;
+  }
+
+  .white-bar-third {
+    bottom: -25%;
+  }
+}
+
+@media screen and (min-width: 995px) {
+  .logo-container {
+    width: 70px;
+    height: 70px;
+  }
+}

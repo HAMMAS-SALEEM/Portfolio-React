@@ -1,6 +1,7 @@
 import React from 'react';
 import { socialLinks } from './data/SocialLinks';
 import '../stylesheets/contact.css';
+import Logo from './Logo';
 
 const Contact = () => (
   <div className="contact-section">
@@ -21,7 +22,7 @@ const Contact = () => (
       <button type="submit" className="contact-form-submit-button">Submit</button>
     </form>
     <div className="footer-social-links">
-      <h3 className="footer-icon">hammasCoding</h3>
+      <h3 className="footer-icon"><Logo /><span>hammasCoding</span></h3>
       <ul className="footer-social-links-container">
         {
           socialLinks.map((link) => (
