@@ -4,7 +4,7 @@
   justify-content: space-between;
   padding: 30px;
   align-items: center;
-  height: 50px;
+  height: 70px;
   width: 100%;
   z-index: 100;
 }
@@ -117,6 +117,10 @@
 @media screen and (min-width: 768px) {
   .navbar {
     height: 100px;
+  }
+
+  .navbar-social-icons-container {
+    right: 15px;
   }
 
   .menu-close-icon-container,
