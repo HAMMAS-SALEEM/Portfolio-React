@@ -29,7 +29,7 @@ const Contact = () => (
       <ul className="footer-social-links-container">
         {
           socialLinks.map((link) => (
-            <li key={link.id}>
+            <li key={`link-${link.id}`}>
               <a href={link.link}>
                 <link.icon className="social-icon" />
               </a>

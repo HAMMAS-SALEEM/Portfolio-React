@@ -46,7 +46,7 @@ const Navbar = () => {
                 <NavLink
                   onClick={handleMenu}
                   className="nav-single-link"
-                  key={link.id}
+                  key={`navlink-${link.id}`}
                   to={link.to}
                 >
                   {link.title}
