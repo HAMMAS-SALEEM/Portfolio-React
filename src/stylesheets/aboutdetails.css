@@ -43,6 +43,10 @@
   color: rgb(235, 69, 76);
 }
 
+.about-details-container {
+  min-height: 300px;
+}
+
 .about-me-skills-title {
   color: rgb(155, 157, 164);
   font-weight: 700;

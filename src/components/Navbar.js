@@ -8,6 +8,7 @@ import { ReactComponent as Twitter } from '../images/icons/twitter.svg';
 import { ReactComponent as AngelList } from '../images/icons/angellist.svg';
 import { ReactComponent as Close } from '../images/icons/close.svg';
 import { ReactComponent as Menu } from '../images/icons/menu.svg';
+import Logo from './Logo';
 
 const Navbar = () => {
   const [menuStatus, setMenuStatus] = useState(false);
@@ -27,28 +28,37 @@ const Navbar = () => {
   return (
     <>
       <nav className={navbar ? 'navbar active' : 'navbar'}>
-        <div className={menuStatus ? 'mobile-side-nav' : 'mobile-side-nav-hidden'}>
-          <ul>
-            <li className="menu-close-icon-container">
-              <Close onClick={handleMenu} className="social-icon menu-close-icon" />
-            </li>
-            <li>
-              <ul className="nav-links">
-                {
+        <div className="logo-navlink-container">
+          <NavLink to="#home">
+            <Logo />
+          </NavLink>
+          <div className={menuStatus ? 'mobile-side-nav' : 'mobile-side-nav-hidden'}>
+            <ul>
+              <li className="menu-close-icon-container">
+                <Close onClick={handleMenu} className="social-icon menu-close-icon" />
+              </li>
+              <li>
+                <ul className="nav-links">
+                  {
           links.map((link) => (
-            <NavLink
-              onClick={handleMenu}
-              className="nav-single-link"
-              key={link.id}
-              to={link.to}
-            >
-              {link.title}
-            </NavLink>
+            link.id > 0
+              ? (
+                <NavLink
+                  onClick={handleMenu}
+                  className="nav-single-link"
+                  key={`navlink-${link.id}`}
+                  to={link.to}
+                >
+                  {link.title}
+                </NavLink>
+              )
+              : ''
           ))
         }
-              </ul>
-            </li>
-          </ul>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
         <ul className="navbar-social-icons-container">
           <li>

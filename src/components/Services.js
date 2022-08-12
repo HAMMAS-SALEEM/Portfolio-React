@@ -13,7 +13,7 @@ const Services = () => {
       <ul className="services-container">
         {
           services.map((service) => (
-            <li key={service.id}>
+            <li key={`service-${service.id}`}>
               <ServiceCard card={service} />
             </li>
           ))

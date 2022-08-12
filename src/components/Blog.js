@@ -13,7 +13,7 @@ const Blog = () => {
       <div className="blogs-container">
         {
           blogs.map((blog) => (
-            <BlogCard key={blog.id} blog={blog} />
+            <BlogCard key={`blog-${blog.id}`} blog={blog} />
           ))
         }
       </div>

@@ -4,7 +4,7 @@
   justify-content: space-between;
   padding: 30px;
   align-items: center;
-  height: 50px;
+  height: 70px;
   width: 100%;
   z-index: 100;
 }
@@ -19,6 +19,11 @@
 .navbar,
 .navbar.active {
   transition: background 300ms ease-in-out;
+}
+
+.logo-navlink-container {
+  display: flex;
+  align-items: center;
 }
 
 .mobile-side-nav,
@@ -69,6 +74,8 @@
 .navbar-social-icons-container {
   display: flex;
   height: 30px;
+  position: absolute;
+  right: 90px;
 }
 
 .social-icon {
@@ -108,6 +115,14 @@
 }
 
 @media screen and (min-width: 768px) {
+  .navbar {
+    height: 100px;
+  }
+
+  .navbar-social-icons-container {
+    right: 15px;
+  }
+
   .menu-close-icon-container,
   .menu-close-icon,
   .menu-open-icon {
@@ -132,7 +147,7 @@
 
   .nav-single-link {
     border-bottom: none;
-    margin: 0;
+    margin: 0 0 0 20px;
     padding-top: 10px;
   }
 

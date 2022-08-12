@@ -14,8 +14,8 @@ const AboutDetails = () => {
       <ul className="about-details-navbar">
         {
             aboutLinks.map((link, index) => (
-              <li className="single-navlink-container" key={link.id}>
-                <button onClick={(e) => handleLink(e.target.id.slice(1, 2))} id={`a${index}`} className={handleActiveLink(index)} type="button">
+              <li className="single-navlink-container" key={`card-${link.id}`}>
+                <button onClick={() => handleLink(index)} id={`a${index}`} className={handleActiveLink(index)} type="button">
                   {link.link}
                   <br />
                   <div className="about-navlink-border"> </div>
@@ -24,10 +24,10 @@ const AboutDetails = () => {
             ))
           }
       </ul>
-      <ul>
+      <ul className="about-details-container">
         {
             aboutDetails[view].map((detail) => (
-              <li key={detail.id}>
+              <li key={`detail-${detail.id}`}>
                 <ul>
                   <li className="about-me-skills-title">
                     {detail.title}
