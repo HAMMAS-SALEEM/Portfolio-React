@@ -24,7 +24,7 @@ const AboutDetails = () => {
             ))
           }
       </ul>
-      <ul>
+      <ul className="about-details-container">
         {
             aboutDetails[view].map((detail) => (
               <li key={`detail-${detail.id}`}>
