@@ -2,13 +2,10 @@ import React, { useState } from 'react';
 import { HashLink as NavLink } from 'react-router-hash-link';
 import '../stylesheets/navbar.css';
 import { links } from './data/NavbarData';
-import { ReactComponent as GitHub } from '../images/icons/github.svg';
-import { ReactComponent as LinkedIn } from '../images/icons/linkedin.svg';
-import { ReactComponent as Twitter } from '../images/icons/twitter.svg';
-import { ReactComponent as AngelList } from '../images/icons/angellist.svg';
 import { ReactComponent as Close } from '../images/icons/close.svg';
 import { ReactComponent as Menu } from '../images/icons/menu.svg';
 import Logo from './Logo';
+import { socialLinks } from './data/SocialLinks';
 
 const Navbar = () => {
   const [menuStatus, setMenuStatus] = useState(false);
@@ -55,32 +52,34 @@ const Navbar = () => {
               : ''
           ))
         }
+                  <li>
+                    <ul id="navbar-social-icons-container" className="navbar-social-icons-container">
+                      {
+          socialLinks.map((link) => (
+            <li key={`link-${link.id}`}>
+              <a href={link.link}>
+                <link.icon className="social-icon special" />
+              </a>
+            </li>
+          ))
+        }
+                    </ul>
+                  </li>
                 </ul>
               </li>
             </ul>
           </div>
         </div>
         <ul className="navbar-social-icons-container">
-          <li>
-            <a href="https://www.linkedin.com/in/hammas-saleem">
-              <LinkedIn className="social-icon" />
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/HAMMAS-SALEEM">
-              <GitHub className="social-icon" />
-            </a>
-          </li>
-          <li>
-            <a href="https://twitter.com/HammasSaleem4">
-              <Twitter className="social-icon" />
-            </a>
-          </li>
-          <li>
-            <a href="https://angel.co/u/hammas-saleem">
-              <AngelList className="social-icon" />
-            </a>
-          </li>
+          {
+          socialLinks.map((link) => (
+            <li key={`link-${link.id}`}>
+              <a href={link.link}>
+                <link.icon className="social-icon" />
+              </a>
+            </li>
+          ))
+        }
         </ul>
         <Menu onClick={handleMenu} className="social-icon menu-open-icon" />
       </nav>
